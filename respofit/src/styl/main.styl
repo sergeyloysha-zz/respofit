@@ -750,9 +750,51 @@ input.switch__toggle:checked + label:after {
             &_three:nth-child(3)
                 padding 0 0 0 66px
                 
-@media (max-width: 736px)
+@media (max-width: 750px)
 
-    .mw736
+    .header
+        height 50px
+        
+        &__inner
+            height 50px        
+        
+        &__logo
+            margin-top 15px
+            background-size 97px 21px
+            width 97px
+            height 21px
+            
+    .header__menu
+        height 35px
+        margin 7.5px 0
+        
+        &-item
+            margin 0 0 0 10px
+            height 35px
+            
+            span
+                top 5px
+                font-size 9px
+                line-height 12.5px
+            
+        &-link
+            width 35px
+            height 35px
+            background-size 35px 140px
+            
+            &_calendar
+                background-position 0 0
+                
+            &_menu
+                background-position 0 -35px
+                
+                &:hover
+                    background-position 0 -70px
+                    
+                &.active
+                    background-position 0 -105px
+
+    .mw750
         display none
 
     .grid
