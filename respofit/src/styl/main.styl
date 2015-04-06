@@ -542,6 +542,19 @@ select
         
         &:hover
             background #da3d00
+            
+/*
+    Grid
+*/
+
+.grid
+    clearfix()
+    width 100%
+    margin 25px 0
+    padding-bottom 25px
+        
+        &:first-child
+            padding-bottom 25px
         
 
 /*
@@ -809,8 +822,8 @@ input.switch__toggle:checked + label:after {
 
     .grid
         width 100%
-        margin 50px 0
-        padding-bottom 50px
+        margin 25px 0
+        padding-bottom 25px
         
         &__col
             border-bottom 1px solid #cfd8df
@@ -823,14 +836,14 @@ input.switch__toggle:checked + label:after {
             
             &_three
                 width 100%
-                margin-bottom 50px
+                margin-bottom 25px
         
             &_three:nth-child(1)
-                padding 0 0 50px 0
+                padding 0 0 25px 0
             &_three:nth-child(2)
-                padding 0 0 50px 0
+                padding 0 0 25px 0
             &_three:nth-child(3)
-                padding 0 0 50px 0
+                padding 0 0 25px 0
         
         &_border
             border-bottom none
@@ -908,4 +921,32 @@ input.switch__toggle:checked + label:after {
             line-height 50px
             font-size 1.2em
             border-radius 5px
-        
+            
+    /*
+        Footer
+    */
+
+    .footer
+        height 38px
+            
+        &__link
+            position relative
+            display inline-block
+            width 23px
+            height 23px
+            background-size 23px 69px
+            margin 0 5px
+            top 8px
+            
+            &:hover
+                opacity .8
+            
+            &_facebook
+                background-position 0 -23px
+                
+            &_twitter
+                background-position 0 0
+                
+            &_instagram
+                background-position 0 -46px
+            
