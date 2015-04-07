@@ -13,14 +13,40 @@ body
 					a.header__menu-link.header__menu-link_calendar(href='#')
 				li.header__menu-item
 					a.header__menu-link.header__menu-link_menu(href='#')
+					ul.dropdown
+						li.dropdown__item
+							a.dropdown__link(href='#')
+								i.dropdown__icon.dropdown__icon_time
+								span Mein Trainingsplan
+						li.dropdown__item
+							a.dropdown__link(href='#')
+								i.dropdown__icon.dropdown__icon_headphones
+								span Ubungen
+						li.dropdown__item
+							a.dropdown__link(href='#')
+								i.dropdown__icon.dropdown__icon_calendar
+								span Training Historie
+						li.dropdown__item
+							a.dropdown__link(href='#')
+								i.dropdown__icon.dropdown__icon_heart
+								span Extras
+						li.dropdown__item
+							a.dropdown__link(href='#')
+								i.dropdown__icon.dropdown__icon_gear
+								span Einstellungen
+						li.dropdown__item
+							a.dropdown__link(href='#')
+								.dropdown__icon.dropdown__icon_label 12
+								span Narichrichten
+
 	.intro
 		.image
 			.image__controls
 				a.image__control.image__control_left(href='#')
 				a.image__control.image__control_right(href='#')
 			.image__data
-				.image__text Today is:
-				.image__date 19.02.2015
+				.image__text
+				.image__date
 			img.image__preview(src='images/2.jpg')
 
 	.container
