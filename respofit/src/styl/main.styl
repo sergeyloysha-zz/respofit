@@ -158,10 +158,8 @@ body
         padding 25px 30px
         line-height 50px
         color #fff
-            
-        & span
-            display inline-block
-            float left
+        text-align left
+        text-decoration none
         
     &__icon
         display inline-block
@@ -855,10 +853,11 @@ input.switch__toggle:checked + label:after {
         margin 12px 0
         
         &-item
+            position static
             margin 0 0 0 16px
             height 56px
             
-            span
+            & span
                 top 8px
                 font-size 1.4em
                 line-height 20px
@@ -879,6 +878,40 @@ input.switch__toggle:checked + label:after {
                     
                 &.active
                     background-position 0 -168px
+                    
+    /*
+        Dropdown
+    */
+
+    .dropdown
+        top 80px
+        min-width 0
+        width 100%
+            
+        &__link
+            padding 12.5px 15px
+            line-height 25px
+            color #fff
+            
+        &__icon
+            float left
+            width 25px
+            height 25px
+            background-size 25px 150px
+            margin 0 10px 0 0
+            
+            &_time
+                background-position 0 -25px
+            &_gear
+                background-position 0 0
+            &_headphones
+                background-position 0 -50px
+            &_heart
+                background-position 0 -100px
+            &_calendar
+                background-position 0 -125px
+            &_label
+                background-position 0 -75px
 
     .hm
         display none
