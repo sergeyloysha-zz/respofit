@@ -668,61 +668,44 @@ select
   user-select: none;
 }
 
-/* ============================================================
-  SWITCH 1 - ROUND
-============================================================ */
-input.switch__toggle + label {
-  padding: 2px;
-  width: 120px;
-  height: 60px;
-  background-color: #dddddd;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  -ms-border-radius: 60px;
-  -o-border-radius: 60px;
-  border-radius: 60px;
-  margin-top 10px
-}
-input.switch__toggle + label:before, input.switch__toggle + label:after {
-  display: block;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  bottom: 1px;
-  content: "";
-}
-input.switch__toggle + label:before {
-  right: 1px;
-  background-color: #c03600;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  -ms-border-radius: 60px;
-  -o-border-radius: 60px;
-  border-radius: 60px;
-  -webkit-transition: background 0.4s;
-  -moz-transition: background 0.4s;
-  -o-transition: background 0.4s;
-  transition: background 0.4s;
-}
-input.switch__toggle + label:after {
-  width: 58px;
-  background-color: #fff;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
-  border-radius: 100%;
-  -webkit-transition: margin 0.4s;
-  -moz-transition: margin 0.4s;
-  -o-transition: margin 0.4s;
-  transition: margin 0.4s;
-}
-input.switch__toggle:checked + label:before {
-  background-color: #39aa3d;
-}
-input.switch__toggle:checked + label:after {
-  margin-left: 60px;
-}
+/*
+    Switch
+*/
+
+input.switch__toggle + label
+    padding 2px
+    width 120px
+    height 60px
+    background-color #dddddd
+    border-radius 60px
+    margin-top 10px
+
+input.switch__toggle + label:before, input.switch__toggle + label:after
+    display block
+    position absolute
+    top 1px
+    left 1px
+    bottom 1px
+    content ""
+
+input.switch__toggle + label:before
+    right 1px
+    background-color #c03600
+    border-radius 60px
+    transition background 0.4s
+
+input.switch__toggle + label:after
+    width 58px
+    background-color #fff
+    border-radius 100%
+    transition margin 0.4s
+
+input.switch__toggle:checked + label:before
+    background-color #39aa3d
+
+input.switch__toggle:checked + label:after
+    margin-left 60px
+
 
 .page
     width 100%
@@ -897,6 +880,10 @@ input.switch__toggle:checked + label:after {
 
     .hm
         display none
+        
+    /*
+        Grid    
+    */
 
     .grid
         width 100%
@@ -904,17 +891,19 @@ input.switch__toggle:checked + label:after {
         padding-bottom 25px
         
         &__col
-            border-bottom 1px solid #cfd8df
+            
             
             &:last-child
                 margin-bottom 0
             
             &_two
                 width 100%
+                margin-bottom 10px
             
             &_three
                 width 100%
                 margin-bottom 25px
+                border-bottom 1px solid #cfd8df
         
             &_three:nth-child(1)
                 padding 0 0 25px 0
@@ -933,6 +922,73 @@ input.switch__toggle:checked + label:after {
             &:first-child
                 padding-bottom 0
                 border-bottom none
+                
+    /*
+        Inputs    
+    */
+    fieldset
+        position relative
+        margin 10px 0
+        height auto
+        line-height 45px
+        
+        & span
+            font-size 1.2em
+            float left
+            margin 0 10px 0 0
+        
+    input[type="text"]
+    select
+        width 100%
+        height 45px
+        line-height 46px
+        border: 2px solid #d7dde2
+        border-radius 5px
+        padding 0 10px
+        min-width 60%
+        margin 0 0 0 10px
+        font-size 1.2em
+        
+        &.field
+            width calc(100% - 55px)
+            
+    select
+        text-indent 5px
+        
+    .field_info
+        position relative
+        margin 0 0 0 10px
+        width 45px
+        height 45px
+        border-radius 50%
+        border: 2px solid #d7dde2
+        line-height 45px
+        font-size 24px
+        bottom 2px
+        
+    /*
+        Switch
+    */
+
+    input.switch__toggle + label
+        padding 2px
+        width 60px
+        height 30px
+        border-radius 30px
+        margin-top 6px
+
+    input.switch__toggle + label:before
+        border-radius 30px
+
+    input.switch__toggle + label:after
+        width 29px
+
+    input.switch__toggle:checked + label:after
+        margin-left 30px
+        
+    /*
+        .Head    
+    */
                 
     .head
         margin 15px 0
@@ -973,7 +1029,7 @@ input.switch__toggle:checked + label:after {
         &__title
             margin 0
             line-height 28px
-            font-size 2em
+            font-size 2.4em
             
     /*
         Buttons
