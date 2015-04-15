@@ -1,0 +1,40 @@
+doctype
+html
+head
+	include _head.jade
+body
+
+	include _header.jade
+
+	.intro
+		.image
+			.image__controls
+				a.image__control.image__control_left(href='#')
+				a.image__control.image__control_right(href='#')
+			.image__data
+				.image__text
+				.image__date
+			img.image__preview(src='images/2.jpg')
+
+	.container
+		.container__inner
+			.head
+				.head__col
+					a.head__button-back(href='#') ZURUCK
+						i.head__button-back_arrow
+				.head__col
+					.hm
+						a.head__search(href='#')
+						input.head__search-input.hide(placeholder='Search placeholder')
+				.head__col
+					h2.head__title.right Trainingsplan
+			.content.v-block_grid
+				.grid
+					.grid__col.grid__col_three
+						.btn.btn_green.btn_large.btn_full Diese Werche
+					.grid__col.grid__col_three
+						.btn.btn_green.btn_large.btn_full Diese Werche
+					.grid__col.grid__col_three
+						.btn.btn_green.btn_large.btn_full Diese Werche
+
+	include _footer.jade
