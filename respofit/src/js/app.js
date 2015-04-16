@@ -1,4 +1,7 @@
 $(function() {
+
+    $('select').simpleselect();
+
     $('.head__search').on('click', function(e){
     	e.preventDefault();
     	$(this).addClass('hide');

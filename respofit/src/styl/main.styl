@@ -1,6 +1,7 @@
 @import 'nib'
 @import 'normalize'
 @import 'modal'
+@import 'inputs'
 
 font_main = "Roboto"
 font_color = #264257
@@ -574,10 +575,10 @@ body
             
 fieldset
     padding 0
-    margin 20px 0
+    margin 30px 0
     border 0
-    height 80px
-    line-height 80px
+    height 70px
+    line-height 70px
     
     & span
         display inline-block
@@ -592,30 +593,6 @@ fieldset
     & .grid
         margin 0
         padding 0
-    
-input[type="text"],
-input[type="password"]
-select
-    display inline-block
-    height 80px
-    line-height 80px
-    border: 4px solid #d7dde2
-    border-radius 8px
-    background #fff
-    padding 0 20px
-    min-width 60%
-    color font_color
-    margin 0 0 0 20px
-    
-
-    &:first-child
-        margin 0
-
-    &:focus
-        border-color #a9b7c0
-        
-select
-    text-indent 10px
     
 .field_info
     display inline-block
