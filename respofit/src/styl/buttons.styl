@@ -4,23 +4,22 @@
 
 .btn
     display inline-block
+    
     height 50px
     line-height 50px
+    
     padding 0 40px
+    border-radius 5px
+    
+    background #39aa3d
     color #fff
     font-weight 300
-    background #39aa3d
     text-decoration none
     text-align center
-    
-    &_small
-        border-radius 50px
         
     &_medium
         height 100px
         line-height 100px
-        font-size 18px
-        border-radius 5px
         text-transform uppercase
         font-weight 400
         padding 0 20px
@@ -29,12 +28,15 @@
         height 100px
         line-height 100px
         font-size 24px
-        border-radius 5px
         text-transform uppercase
         font-weight 500
         
     &_full
         width 100%
+        
+    &_rounded
+        border-radius 100px
+        
         
     
     &:hover
@@ -52,3 +54,24 @@
         
         &:hover
             background #da3d00
+            
+@media (max-width: 750px)
+            
+    /*
+        Buttons
+    */
+
+    .btn
+        height 40px
+        line-height 40px
+        padding 0 20px
+            
+        &_medium
+            height 50px
+            line-height 50px
+            padding 0 10px
+            
+        &_large
+            height 50px
+            line-height 50px
+            font-size 12px
