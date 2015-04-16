@@ -1,3 +1,8 @@
+fieldset
+    padding 0
+    margin 30px 0
+    border 0
+
 input[type="text"],
 input[type="password"]
     display inline-block
@@ -6,7 +11,6 @@ input[type="password"]
     
     background #fff
     line-height 24px
-    font-size 18px
     color #264257
     margin 0 0 0 20px
     
@@ -27,3 +31,106 @@ input[type="password"]
 /*
     Select
 */
+
+/*
+    Switch
+*/
+
+.switch
+    clearfix()
+    line-height 70px
+    
+    span
+        margin-right 20px
+
+.switch__toggle
+    position absolute
+    margin-left -9999px
+    visibility hidden
+
+    & + label
+        display block
+        position relative
+        cursor pointer
+        outline none
+        -webkit-user-select none
+        -moz-user-select none
+        -ms-user-select none
+        user-select none
+
+input.switch__toggle + label
+    width 100px
+    height 50px
+    background-color #dddddd
+    border-radius 50px
+    margin 10px 0
+
+    &:before
+    &:after
+        display block
+        position absolute
+        top 1px
+        left 1px
+        bottom 1px
+        content ""
+
+    &:before
+        right 1px
+        background-color #c03600
+        border-radius 50px
+        transition background 0.4s
+
+    &:after
+        width 48px
+        background-color #fff
+        border-radius 100%
+        transition margin 0.4s
+
+input.switch__toggle:checked + label:before
+    background-color #39aa3d
+
+input.switch__toggle:checked + label:after
+    margin-left 50px
+    
+/*
+    Mobile
+*/
+    
+@media (max-width: 750px)
+
+    fieldset
+        margin 10px 0
+        
+    input[type="text"]
+    input[type="password"]
+        width 100%
+        padding 11.5px 10px
+        line-height 22px
+        box-shadow: 0 0 0 2px rgba(152, 152, 156, .15)
+        border-radius 5px
+        margin 0 0 0 10px
+
+        &:focus
+            box-shadow: 0 0 0 2px rgba(38, 66, 87, .3)
+            
+    .switch
+        line-height 45px
+        
+        span
+            text-align left
+            float left
+
+    input.switch__toggle + label
+        width 75px
+        height 45px
+        border-radius 45px
+        margin 0
+
+        &:before
+            border-radius 45px
+
+        &:after
+            width 43px
+
+    input.switch__toggle:checked + label:after
+        margin-left 30px

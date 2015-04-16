@@ -2,6 +2,8 @@
 @import 'normalize'
 @import 'modal'
 @import 'inputs'
+@import 'buttons'
+@import 'head'
 
 font_main = "Roboto"
 font_color = #264257
@@ -337,77 +339,6 @@ body
     Content
 */
     
-.head
-    clearfix()
-    margin 20px 0
-    padding 0 0 20px 0
-    border-bottom 1px solid #cfd8df
-    
-    &__col
-        display block
-        float left
-        width 33.33333%
-        height 55px
-        
-    &__button-back
-        position relative
-        display inline-block
-        background button_blue
-        color #fff
-        text-transform uppercase
-        text-decoration none
-        border-radius 3px
-        font-size 1.3em
-        height 55px
-        line-height 55px
-        padding 0 20px 0 5px
-        margin-left 22px
-        
-        &:hover
-            color #fff
-        
-        &_arrow
-            display block
-            position absolute
-            top 0
-            left -22px
-            width 24px
-            height 55px
-            background url('../images/back.png') left center no-repeat
-        
-            
-    &__search
-        display block
-        margin 0 auto
-        width 24px
-        height 55px
-        background url('../images/search.png') center no-repeat
-        
-    &__search-input
-        display block
-        position relative
-        width 80%
-        top 7px
-        background #fff
-        margin 0 auto
-        padding 11px 20px 11px 55px
-        border 0
-        border-radius 50px
-        background-image url('../images/search_small.png')
-        background-position 20px center
-        background-repeat no-repeat
-        line-height 18px
-        
-        &:focus
-            box-shadow(0 0 0 2px #95a6b3)
-            
-    &__title {
-        margin 0
-        line-height 55px
-        font-size 36px
-        font-weight 300
-    }
-    
 /*
     Lists
 */
@@ -571,105 +502,29 @@ body
         
     & .v-block__label
         opacity 1
-        
-            
-fieldset
-    padding 0
-    margin 30px 0
-    border 0
-    height 70px
-    line-height 70px
-    
-    & span
-        display inline-block
-        margin 0 20px 0 0
-        
-    &:first-child
-        margin-top 0
-        
-    &:last-child
-        margin-bottom 0
-        
-    & .grid
-        margin 0
-        padding 0
     
 .field_info
     display inline-block
     margin 0 20px
     vertical-align middle
-    width 70px
-    height 70px
+    width 65px
+    height 65px
     border-radius 50%
-    border: 4px solid #d7dde2
     text-align center
     line-height 65px
-    font-size 48px
+    font-size 44px
     color #39aa3d
     font-family Georgia
     text-decoration none
     font-style italic
     font-weight 600
     background #fff
+    box-shadow: 0 0 0 4px rgba(152, 152, 156, .15)
+    transition box-shadow .2s
     
     &:hover
-        border-color #a9b7c0
+        box-shadow: 0 0 0 4px rgba(38, 66, 87, .3)
         color #39aa3d
-            
-/*
-    Buttons
-*/
-
-.btn
-    display inline-block
-    height 50px
-    line-height 50px
-    padding 0 40px
-    color #fff
-    font-weight 300
-    background #39aa3d
-    text-decoration none
-    text-align center
-    
-    &_small
-        border-radius 50px
-        
-    &_medium
-        height 100px
-        line-height 100px
-        font-size 18px
-        border-radius 5px
-        text-transform uppercase
-        font-weight 400
-        padding 0 20px
-        
-    &_large
-        height 100px
-        line-height 100px
-        font-size 24px
-        border-radius 5px
-        text-transform uppercase
-        font-weight 500
-        
-    &_full
-        width 100%
-        
-    
-    &:hover
-        text-decoration none
-        color #fff
-    
-    &_green
-        background #39aa3d
-        
-        &:hover
-            background #42ae45
-            
-    &_red
-        background #c03600
-        
-        &:hover
-            background #da3d00
             
 /*
     Grid
@@ -718,60 +573,6 @@ fieldset
             
         &_instagram
             background-position 0 -90px
-            
-.switch__toggle {
-  position: absolute;
-  margin-left: -9999px;
-  visibility: hidden;
-}
-.switch__toggle + label {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  outline: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/*
-    Switch
-*/
-
-input.switch__toggle + label
-    padding 2px
-    width 120px
-    height 60px
-    background-color #dddddd
-    border-radius 60px
-    margin-top 10px
-
-input.switch__toggle + label:before, input.switch__toggle + label:after
-    display block
-    position absolute
-    top 1px
-    left 1px
-    bottom 1px
-    content ""
-
-input.switch__toggle + label:before
-    right 1px
-    background-color #c03600
-    border-radius 60px
-    transition background 0.4s
-
-input.switch__toggle + label:after
-    width 58px
-    background-color #fff
-    border-radius 100%
-    transition margin 0.4s
-
-input.switch__toggle:checked + label:before
-    background-color #39aa3d
-
-input.switch__toggle:checked + label:after
-    margin-left 60px
 
 
 .page
@@ -837,7 +638,6 @@ input.switch__toggle:checked + label:after
         margin-top 90px
         
     & form
-        margin 40px 0
         height 100%
         text-align center
         
@@ -896,10 +696,13 @@ input.switch__toggle:checked + label:after
             & .grid__col_two:last-child
                 padding 0 0 0 25px
                 
+    .highlights
+        display none
+                
 @media (max-width: 750px)
 
     body
-        font 10px/1 font_main, "Helvetica Neue", Helvetica, Arial, sans-serif
+        font 14px/18px font_main, "Helvetica Neue", Helvetica, Arial, sans-serif
 
     .header
     .container
@@ -1211,111 +1014,6 @@ input.switch__toggle:checked + label:after
             
         & .v-block__label
             opacity 1
-                
-    /*
-        Inputs    
-    */
-    fieldset
-        margin 10px 0
-        height auto
-        line-height 45px
-        
-        & span
-            font-size 1.2em
-            float left
-            margin 0 10px 0 0
-        
-    input[type="text"]
-    select
-        width 100%
-        height 45px
-        line-height 45px
-        border: 2px solid #d7dde2
-        border-radius 5px
-        padding 0 10px
-        min-width 60%
-        margin 0 0 0 10px
-        font-size 1.2em
-        
-        &.field
-            width calc(100% - 55px)
-            
-    select
-        text-indent 5px
-        
-    .field_info
-        margin 0 0 0 10px
-        width 45px
-        height 45px
-        border-radius 50%
-        border: 2px solid #d7dde2
-        line-height 45px
-        font-size 24px
-        
-    /*
-        Switch
-    */
-
-    input.switch__toggle + label
-        padding 2px
-        width 60px
-        height 30px
-        border-radius 30px
-        margin-top 6px
-
-    input.switch__toggle + label:before
-        border-radius 30px
-
-    input.switch__toggle + label:after
-        width 29px
-
-    input.switch__toggle:checked + label:after
-        margin-left 30px
-        
-    /*
-        .Head    
-    */
-                
-    .head
-        margin 15px 0
-        padding 0 0 15px 0
-        
-        &__col
-            height 28px
-            
-        &__button-back
-            font-size 12px
-            height 28px
-            line-height 28px
-            padding 0 10px 0 3px
-            margin-left 11px
-            
-            &_arrow
-                display block
-                position absolute
-                top 0
-                left -10px
-                width 12px
-                height 28px
-                background-size 12px 28px
-            
-                
-        &__search
-            width 12px
-            height 28px
-            background-size 12px 28px
-            
-        &__search-input
-            top 4px
-            padding 6px 10px 6px 28px
-            border-radius 25px
-            background-position 10px center
-            line-height 9px
-                
-        &__title
-            margin 0
-            line-height 28px
-            font-size 2.4em
             
     /*
         Buttons
