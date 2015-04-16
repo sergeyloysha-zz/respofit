@@ -30,6 +30,18 @@
       </ul>
     </div>
   </div>
+  <form id="pass-form" style="display:none;" class="modal">
+    <h2>Passwort ändern</h2>
+    <fieldset>
+      <input placeholder="Old password" type="text">
+    </fieldset>
+    <fieldset>
+      <input placeholder="New password" type="text">
+    </fieldset>
+    <fieldset>
+      <input placeholder="Repeat password" type="text">
+    </fieldset><a class="btn btn_green btn_small btn_full">OK</a>
+  </form>
   <div class="intro">
     <div class="image"><img src="images/40.jpg" class="image__preview"></div>
   </div>
@@ -56,6 +68,7 @@
                 <option>Buro</option>
               </select>
             </fieldset>
+            <fieldset><a href="#pass-form" rel="modal:open">Passwort ändern</a></fieldset>
           </div>
           <div class="grid__col grid__col_two right">
             <fieldset>

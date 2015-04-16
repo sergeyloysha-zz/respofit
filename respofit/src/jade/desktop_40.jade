@@ -6,6 +6,16 @@ body
 
 	include _header.jade
 
+	form#pass-form.modal(style='display:none;')
+		h2 Passwort ändern
+		fieldset
+			input(placeholder='Old password', type='text')
+		fieldset
+			input(placeholder='New password', type='text')
+		fieldset
+			input(placeholder='Repeat password', type='text')
+		a.btn.btn_green.btn_small.btn_full OK
+
 	.intro
 		.image
 			img.image__preview(src='images/40.jpg')
@@ -30,6 +40,8 @@ body
 						fieldset
 							select
 								option Buro
+						fieldset
+							a(href='#pass-form', rel='modal:open') Passwort ändern
 					.grid__col.grid__col_two.right
 						fieldset
 							.switch
