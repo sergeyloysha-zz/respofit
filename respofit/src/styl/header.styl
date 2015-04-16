@@ -1,0 +1,88 @@
+.header
+    background #264257     
+    
+    &__logo
+        position relative
+        display block
+        float left
+        top 30px
+        background url('../images/logo.png') no-repeat
+        width 193px
+        height 42px
+        
+.header__menu
+    list-style none
+    clearfix()
+    margin 15px 0
+    padding 0
+    
+    &-item
+        position relative
+        float left
+        margin 0 0 0 20px
+
+        span
+            position relative
+            top 10px
+            font-size 18px
+            line-height 25px
+            color #fff
+            font-weight 300
+        
+    &-link
+        display block
+        width 70px
+        height 70px
+        background-image url('../images/menu.png')
+        background-repeat no-repeat
+        
+        &_calendar
+            background-position 0 0
+            
+        &_menu
+            background-position 0 -70px
+            
+            &:hover
+                background-position 0 -140px
+                
+            &.active
+                background-position 0 -210px
+                & + .dropdown
+                    display block
+                    
+@media (max-width: 750px)
+
+    .header     
+        
+        &__logo
+            width 97px
+            height 21px
+            background-size 97px 21px
+            
+    .header__menu
+        margin 12px 0
+        
+        &-item
+            position static
+            margin 0 0 0 16px
+            
+            & span
+                top 8px
+                line-height 20px
+            
+        &-link
+            width 56px
+            height 56px
+            background-size 56px 224px
+            
+            &_calendar
+                background-position 0 0
+                
+            &_menu
+                background-position 0 -56px
+                
+                &:hover
+                    background-position 0 -112px
+                    
+                &.active
+                    background-position 0 -168px
