@@ -1,4 +1,5 @@
 .search
+    clearfix()
     position relative
     margin 20px 0
     padding 0 0 20px 0
@@ -17,6 +18,35 @@
         
         &:hover
             background-position 0 -42px
+            
+    &__title
+        margin 0
+        padding 0
+        font-size 22px
+        font-weight 300
+        line-height 50px
+        
+    &__category
+        display inline-flex
+        background #cfd8df
+        border-radius 100px
+        padding 4px
+        margin 0 0 0 20px
+        
+        &-close
+            display inline-block
+            width 42px
+            height 42px
+            background-image url("../images/modal-close.png")
+            background-repeat no-repeat
+            background-position 0 0
+            
+            &:hover
+                background-position 0 -42px
+            
+        & span
+            line-height 42px
+            padding 0 20px
     
 input.search__input
     width 100%
@@ -36,6 +66,10 @@ input.search__input
         &__close
             right 2px
             top 2px
+        
+        &__category
+            margin 0
+            float right
         
     input.search__input
         padding 11.5px 50px
