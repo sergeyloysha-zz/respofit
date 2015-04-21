@@ -3,6 +3,7 @@ html
 	include _head.jade
 
 body
+	
 	.header
 		.header__inner
 			a.header__logo(href='#')
@@ -12,30 +13,39 @@ body
 				li.header__menu-item
 					a.header__menu-link.header__menu-link_calendar(href='#')
 				li.header__menu-item
-					a.header__menu-link.header__menu-link_menu.active(href='#')
-					ul.dropdown
-						li.dropdown__item
-							a.dropdown__link(href='#')
-								i.dropdown__icon.dropdown__icon_time
-								| Mein Trainingsplan
-						li.dropdown__item
-							a.dropdown__link(href='#')
-								i.dropdown__icon.dropdown__icon_headphones
-								| Ubungen
-						li.dropdown__item
-							a.dropdown__link(href='#')
-								i.dropdown__icon.dropdown__icon_calendar
-								| Training Historie
-						li.dropdown__item
-							a.dropdown__link(href='#')
-								i.dropdown__icon.dropdown__icon_heart
-								| Extras
-						li.dropdown__item
-							a.dropdown__link(href='#')
-								i.dropdown__icon.dropdown__icon_gear
-								| Einstellungen
-						li.dropdown__item
-							a.dropdown__link(href='#')
-								.dropdown__icon.dropdown__icon_label 12
-								| Narichrichten
-	script(src='js/scripts.js')
+
+	.container
+		.container__inner
+			.head
+				.head__col
+					a.head__button-back(href='#') Logout
+						i.head__button-back_arrow
+				.head__col
+					h2.head__title.right Menu
+			ul.menu
+				li.menu__item
+					a.menu__link(href='#')
+						i.menu__icon.menu__icon_time
+						| Mein Trainingsplan
+				li.menu__item
+					a.menu__link(href='#')
+						i.menu__icon.menu__icon_headphones
+						| Ubungen
+				li.menu__item
+					a.menu__link(href='#')
+						i.menu__icon.menu__icon_calendar
+						| Training Historie
+				li.menu__item
+					a.menu__link(href='#')
+						i.menu__icon.menu__icon_heart
+						| Extras
+				li.menu__item
+					a.menu__link(href='#')
+						i.menu__icon.menu__icon_gear
+						| Einstellungen
+				li.menu__item
+					a.menu__link(href='#')
+						.menu__icon.menu__icon_label 12
+						| Narichrichten
+
+	include _footer.jade
