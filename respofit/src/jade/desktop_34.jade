@@ -3,7 +3,7 @@ html
 head
 	include _head.jade
 body
-	
+
 	include _header.jade
 
 	h2.centered Liegestutzen
@@ -11,6 +11,14 @@ body
 	.container
 		.container__inner
 			.v
-				.v__inner
+				.v__preview
+					img.v__preview_image(src='../images/preview.jpg')
+					.v__preview_mask
+				.v__info
+					.v__info_timer
+						span 00:45
+					.v__info_music
+						input#switch1.switch__music(type='checkbox')
+						label(for='switch1').right
 
 	include _footer.jade
