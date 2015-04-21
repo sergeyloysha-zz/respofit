@@ -3,6 +3,9 @@ fieldset
     margin 30px 0
     border 0
 
+input
+    appearance: none;
+
 input[type="text"],
 input[type="password"]
     display inline-block
@@ -108,9 +111,8 @@ input.switch__toggle:checked + label:after
         user-select none
 
 input.switch__music + label
-    width 70px
-    height 50px
-    margin 10px 0
+    width 130px
+    height 70px
 
     &:before
     &:after
@@ -124,14 +126,14 @@ input.switch__music + label
     &:before
         right 0px
         background-color #c03600
-        border-radius 5px
+        border-radius 70px
         transition background 0.4s
 
     &:after
-        width 70px
+        width 130px
         background-color #fff
         transition opacity 0.4s
-        background url('../images/music1.png') center no-repeat
+        background url('../images/music.png') center no-repeat
 
 input.switch__music:checked + label:before
     background-color #39aa3d
