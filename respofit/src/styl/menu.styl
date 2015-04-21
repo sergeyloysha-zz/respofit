@@ -1,0 +1,78 @@
+/*
+    Menu
+*/
+
+.menu
+    margin 20px 0
+    padding 0 0 20px 0
+    z-index 100
+    list-style none
+    width 100%
+    border-bottom: 1px solid #cfd8df;
+    
+    &__item
+        display block
+        background #95a6b3
+        
+        &:nth-child(2n)
+            background #808f9a
+            
+        &:first-child
+            border-radius 8px 8px 0 0
+            
+        &:last-child
+            border-radius 0 0 8px 8px
+        
+    &__link
+        clearfix()
+        display block
+        padding 25px 30px
+        line-height 50px
+        color #fff
+        text-align left
+        text-decoration none
+        
+    &__icon
+        display inline-block
+        float left
+        width 50px
+        height 50px
+        text-align center
+        color #fff
+        background url('../images/menu-icons.png') no-repeat
+        margin 0 15px 0 0
+        
+        &_time
+            background-position 0 -50px
+        &_gear
+            background-position 0 0
+        &_headphones
+            background-position 0 -100px
+        &_heart
+            background-position 0 -200px
+        &_calendar
+            background-position 0 -250px
+        &_label
+            background-position 0 -150px
+            
+@media (max-width: 750px)
+
+    .menu
+        margin 15px 0
+        padding 0 0 15px 0
+        
+        &__item
+            
+            &:first-child
+                border-radius 5px 5px 0 0
+                
+            &:last-child
+                border-radius 0 0 5px 5px
+            
+        &__link
+            padding 10px 15px
+            font-size 15px
+            
+        &__icon
+            margin 0 10px 0 0
+            

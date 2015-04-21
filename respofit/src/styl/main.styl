@@ -1,11 +1,14 @@
 @import 'nib'
 @import 'normalize'
+@import 'typo'
 @import 'modal'
 @import 'inputs'
 @import 'buttons'
 @import 'header'
 @import 'head'
 @import 'search'
+@import 'v'
+@import 'menu'
 
 font_main = "Roboto"
 font_color = #264257
@@ -63,8 +66,6 @@ body
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
     text-rendering geometricPrecision
-    //min-width 736px
-    /*max-width 1920px*/
     background #e2e9ee
     color font_color
     
@@ -221,44 +222,6 @@ body
 /*
     Content
 */
-    
-/*
-    Lists
-*/
-
-.list
-    margin 40px 0 0 0
-    
-.list__circle
-    position relative
-    margin 0 0 30px 0
-    padding 0 0 0 100px
-    min-height 80px
-    
-    span 
-        font-size 18px
-        line-height 25px
-        font-weight 300
-    
-    &-circle
-        position absolute
-        top 0
-        left 0
-        width 80px
-        height 80px
-        background url('../images/item-circle.png') no-repeat
-        line-height 80px
-        text-align center
-        font-size 36px
-        font-weight 300
-        
-.list__control
-    border-top 1px solid #cfd8df
-    padding 40px 0
-    text-align center
-        
-    & .btn
-        width 400px
     
 /*
     Grid
@@ -492,7 +455,6 @@ body
     margin auto
         
     &__headline
-        font-size 36px
         line-height 46px
         font-weight 300
         color #fff
@@ -671,36 +633,6 @@ body
         &__date
             font-size 100px
             line-height 100px
-            
-    /*
-        Lists
-    */
-
-    .list
-        margin 20px 0 0 0
-        
-    .list__circle
-        margin 0 0 15px 0
-        padding 0 0 0 50px
-        min-height 40px
-        
-        span 
-            font-size 12px
-            line-height 18px
-            font-weight 300
-        
-        &-circle
-            width 40px
-            height 40px
-            background-size 40px 40px
-            line-height 40px
-            font-size 18px
-            
-    .list__control
-        padding 20px 0
-        
-        & .btn
-            width 100%
         
     /*
         Grid    
@@ -865,7 +797,6 @@ body
         height 100%
             
         &__headline
-            font-size 24px
             line-height 30px
             margin 0 0 15px 0
             
