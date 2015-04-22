@@ -483,42 +483,21 @@ body
     & .btn
         width 100%
 
-.register .content
+        
+.content
     width 400px
     
     &__logo
         margin-top 90px
         
     & form
-        height 100%
-        
-    & input
-        width 100%
-        
-.login .content
-    width 400px
-    
-    &__logo
-        margin-top 90px
-        
-    & form
-        height 100%
         text-align center
         
     & input
         width 100%
-        
-.login__bottom
-    
-    &_link
-        display block
-        margin 20px 0 0 0 
-
-.update .btn
-    margin-top 65px
             
 .spinner
-  margin 70px auto 0
+  margin 40px auto
   width 70px
   text-align center
 
@@ -824,7 +803,7 @@ body
 
     
     .wrapper
-        padding 20px
+        padding 10px
         height 100%
 
     .screen
@@ -840,11 +819,13 @@ body
         
     .page .content
         position relative
+        padding 0
         max-width 100%
+        width 100%
         height 100%
-            
+        
         &__headline
-            line-height 30px
+            line-height 36px
             margin 0 0 15px 0
             
         &__sub-headline
@@ -853,69 +834,32 @@ body
             margin 15px 0
             
         &__logo
-            position absolute
-            bottom 50%
-            left 50%
-            margin-bottom -60px
-            margin-left -135px
-            width 270px
-            height 60px
-            background-size 270px 60px
-            
-        & .btn
-            font-size 16px
-            position absolute
-            left 0
-            width 100%
-
-    .register .content
+            width 176px
+            height 38px
+            background-size 100%
+            margin 40px 0
+        
+    .login .content__middle
         width 100%
+        position absolute
+        bottom 80px
+        left 0
+        
+        & form input
+            text-align center
+        
+    .content__bottom
+        width 100%
+        position absolute
+        bottom 0
+        left 0
+        
+    .register
+        & form fieldset:last-child
+            margin-bottom 0
+            
+    .update .content
         
         &__logo
-            bottom 260px
-            
-            
-        & form
-            width 100%
-            position absolute
-            bottom 70px
-            left 0
             margin 0
-            height auto
-            text-align center
-            
-        & input
-            width 100%
-            text-align center
-            color #98989c
-            
-    .login .content
-        width 100%
-        
-        &__logo
-            bottom 260px
-            
-            
-        & form
-            width 100%
-            position absolute
-            bottom 70px
-            left 0
-            margin 0
-            height auto
-            text-align center
-            
-        & input
-            width 100%
-            text-align center
-            color #98989c
-
-    .update .btn
-        bottom 40px
-
-    .register .btn
-        bottom 0px
-        
-    .login .btn
-        bottom 0px
             

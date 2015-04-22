@@ -143,7 +143,7 @@ input.switch__music:checked + label:before
     background-color #39aa3d
     
 /*
-    Switch Checkbox
+    Checkbox
 */
 
 
@@ -193,7 +193,7 @@ input.checkbox + label
         background none
 
 input.checkbox:checked + label:after
-    background url('../images/checkbox.png') center no-repeat    
+    background url('../images/checkbox.png') center no-repeat
 /*
     Mobile
 */
@@ -236,3 +236,27 @@ input.checkbox:checked + label:after
 
     input.switch__toggle:checked + label:after
         margin-left 30px
+        
+/*
+    Checkbox
+*/
+
+
+.checkbox
+
+    & + label
+        margin 0 10px 0 0
+
+input.checkbox + label
+    width 20px
+    height 20px
+
+    &:after
+        width 20px
+        height 16px
+        top 2px
+        left 1px
+        background none
+
+input.checkbox:checked + label:after
+    background-size 20px 16px 
