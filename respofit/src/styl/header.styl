@@ -33,25 +33,22 @@
         display block
         width 70px
         height 70px
-        background-image url('../images/menu.png')
         background-repeat no-repeat
+        background-size 100%
         
         &_calendar
-            background-position 0 0
+            background-image url('../images/header_icon_calendar.png')
             
         &_menu
-            background-position 0 -70px
-            
-            &:hover
-                background-position 0 -140px
+            background-image url('../images/header_icon_menu.png')
                 
             &.active
-                background-position 0 -210px
+                background-image url('../images/header_icon_close.png')
                 & + .dropdown
                     display block
                     
         &_logout
-            background-image url('../images/logout.png')
+            background-image url('../images/header_icon_logout.png')
             
                     
 @media (max-width: 750px)
@@ -64,7 +61,7 @@
             background-size 97px 21px
             
     .header__menu
-        margin 12px 0
+        margin 10px 0
         
         &-item
             position static
@@ -75,21 +72,5 @@
                 line-height 20px
             
         &-link
-            width 56px
-            height 56px
-            background-size 56px 224px
-            
-            &_calendar
-                background-position 0 0
-                
-            &_menu
-                background-position 0 -56px
-                
-                &:hover
-                    background-position 0 -112px
-                    
-                &.active
-                    background-position 0 -168px
-                    
-            &_logout
-                background-size 56px 56px
+            width 60px
+            height 60px
