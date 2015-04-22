@@ -39,4 +39,35 @@
                 color #555
 
         &_music
-            margin-left auto
+            display flex
+            //float right
+                
+            & label
+                margin auto
+            
+        &_controls
+            display flex
+            margin auto
+            
+        &_control
+            display inline-block
+            width 55px
+            height 55px
+            background #000
+            margin auto
+            opacity 1
+            cursor pointer
+            transition opacity .2s
+            
+            &_stop
+                background url('../images/stop.png') center no-repeat
+                
+            &_play
+                margin auto 30px
+                background url('../images/play.png') center no-repeat
+                
+            &_replay
+                background url('../images/replay.png') 5px center no-repeat
+                
+            &:hover
+                opacity .7
