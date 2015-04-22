@@ -95,6 +95,10 @@ input.switch__toggle:checked + label:before
 input.switch__toggle:checked + label:after
     margin-left 50px
     
+/*
+    Switch Music
+*/
+
 .switch__music
     position absolute
     margin-left -9999px
@@ -138,6 +142,58 @@ input.switch__music + label
 input.switch__music:checked + label:before
     background-color #39aa3d
     
+/*
+    Switch Checkbox
+*/
+
+
+.checkbox
+    position absolute
+    margin-left -9999px
+    visibility hidden
+
+    & + label
+        display inline-block
+        position relative
+        cursor pointer
+        outline none
+        -webkit-user-select none
+        -moz-user-select none
+        -ms-user-select none
+        user-select none
+        margin 0 20px 0 0
+        
+    &__field
+        text-align left
+
+input.checkbox + label
+    width 25px
+    height 25px
+
+    &:before
+    &:after
+        display block
+        position absolute
+        top 0px
+        left 0px
+        bottom 0px
+        content ""
+
+    &:before
+        right 0px
+        background-color #fff
+        border-radius 3px
+        transition background-color 0.4s
+
+    &:after
+        width 40px
+        height 32px
+        top -11px
+        left -3px
+        background none
+
+input.checkbox:checked + label:after
+    background url('../images/checkbox.png') center no-repeat    
 /*
     Mobile
 */

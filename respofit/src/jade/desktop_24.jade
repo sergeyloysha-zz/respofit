@@ -10,15 +10,18 @@ body
 		.wrapper
 			.content
 				h2.content__headline Willkomen bei der
-				a.content__logo(href='#')
-				form
-					fieldset
-						input(type='text', placeholder='Benutzername')
-					fieldset
-						input(type='password', placeholder='Passwort')
-					fieldset
-						input#switch.switch__checkbox(type='checkbox')
-						label(for='switch')
-						span Eingaben speichern
-				a.btn.btn_medium.btn_green(href='#') Start
-				a.centered Noch nicht registriert?
+				.login__middle
+					a.content__logo(href='#')
+					form
+						fieldset
+							input(type='text', placeholder='Benutzername')
+						fieldset
+							input(type='password', placeholder='Passwort')
+						fieldset
+							.checkbox__field
+								input#switch.checkbox(type='checkbox')
+								label.left(for='switch')
+								label.for(for='switch') Eingaben speichern
+				.login__bottom
+					a.login__bottom_btn.btn.btn_medium.btn_green(href='#') Start
+					a.login__bottom_link(href='#') Noch nicht registriert?
