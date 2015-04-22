@@ -3,18 +3,22 @@ html
 head
 	include _head.jade
 body
-	.page.start
+	.page.login
 		.screen
 			.screen__mask
+
 		.wrapper
 			.content
 				h2.content__headline Willkomen bei der
 				a.content__logo(href='#')
-				a.btn.btn_large.btn_green(href='#') start training
-			.highlights
-				.highlights__block
-					img(src='images/block-1.jpg')
-				.highlights__block
-					img(src='images/block-2.jpg')
-				.highlights__block
-					img(src='images/block-3.jpg')
+				form
+					fieldset
+						input(type='text', placeholder='Benutzername')
+					fieldset
+						input(type='password', placeholder='Passwort')
+					fieldset
+						input#switch.switch__checkbox(type='checkbox')
+						label(for='switch')
+						span Eingaben speichern
+				a.btn.btn_medium.btn_green(href='#') Start
+				a.centered Noch nicht registriert?

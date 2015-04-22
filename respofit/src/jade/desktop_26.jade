@@ -8,10 +8,8 @@ body
 		.header__inner
 			a.header__logo(href='#')
 			ul.header__menu.right
-				li.header__menu-item.hm
-					span Trainingsplan<br>exportieren
 				li.header__menu-item
-					a.header__menu-link.header__menu-link_calendar(href='#')
+					a.header__menu-link.header__menu-link_logout(href='#')
 
 	.container
 		.container__inner
@@ -36,8 +34,10 @@ body
 					a.menu__link(href='#')
 						i.menu__icon.menu__icon_gear
 						| Einstellungen
-				li.menu__item.menu__item_red
-					a.menu__link(href='#') Logout
+				li.menu__item
+					a.menu__link(href='#')
+						i.menu__icon.menu__icon_export
+						| Trainingsplan exportieren
 			a.menu_link(href='#') Sie haben 2 neue Nachrichten
 
 	include _footer.jade
