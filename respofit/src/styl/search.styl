@@ -1,9 +1,10 @@
 .search
     clearfix()
     position relative
-    margin 20px 0
+    margin 20px auto
     padding 0 0 20px 0
     border-bottom 1px solid #cfd8df
+    width 100%
     
     &__close
         display block
@@ -56,9 +57,15 @@ input.search__input
     background-position 25px center
     background-repeat no-repeat
             
+@media (max-width: 1280px)
+
+    .search
+        width 80%
+
 @media (max-width: 750px)
 
     .search
+        width 100%
         margin 15px 0
         padding 0 0 15px 0
         
