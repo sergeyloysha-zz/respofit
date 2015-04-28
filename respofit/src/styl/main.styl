@@ -42,11 +42,17 @@ clearfix()
 .hide
     display none !important
     
+.error
+    text-align center
+    color #DB2121
+    margin 20px 0
+    
 p
     margin 0 0 20px 0
     
 a
-    transition: opacity 0.3s;
+    cursor pointer
+    transition opacity .3s;
     text-decoration underline
     
     &:hover
@@ -55,7 +61,6 @@ a
     &:active
     &:focus
         outline none
-        
 
 html
 body
@@ -836,4 +841,7 @@ body
         
         &__logo
             margin 0
+            
+    .error
+        margin 10px 0
             
