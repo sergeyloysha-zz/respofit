@@ -104,27 +104,11 @@ body
     min-width 300px
     z-index 99999
     
-    &__item
-        display block
-        background #95a6b3
+    & .menu__item
         
-        &:nth-child(2n)
-            background #808f9a
-            
-        &_red
-            background #c03600 !important
-        
-            &:hover
-                background #da3d00 !important
-        
-    &__link
-        clearfix()
-        display block
-        padding 25px 30px
-        line-height 50px
-        color #fff
-        text-align left
-        text-decoration none
+        &:first-child
+        &:last-child
+            border-radius 0px
 
 /*
     Intro
@@ -567,10 +551,6 @@ body
         top 80px
         min-width 0
         width 100%
-            
-        &__link
-            padding 10px 15px
-            font-size 15px
 
     .hm
         display none
