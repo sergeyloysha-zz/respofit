@@ -29,30 +29,32 @@ body
 				.head__col
 					h2.head__title.right Einstellungen
 			.content
-				.grid.grid_border
-					.grid__col.grid__col_two.left
-						fieldset
-							.switch
-								span
-									| Begleitende Musik (default)
-								input#switch1.switch__toggle(type='checkbox')
-								label(for='switch1').right
-						fieldset
-							.switch
-								span
-									| Neue Nachrichten
-								input#switch2.switch__toggle(type='checkbox')
-								label(for='switch2').right
-						fieldset
-							.switch
-								span
-									| Audio - profil
-								.switch.right
-									input#radio_male.switch__sex(type='radio', name='sex', checked)
-									label.left_label(for='radio_male') Male
-									input#radio_female.switch__sex(type='radio', name='sex')
-									label.right_label(for='radio_female') Female
+				.center
+					fieldset
+						.switch
+							span
+								| Begleitende Musik (default)
+							input#switch1.switch__toggle(type='checkbox')
+							label(for='switch1').right
+					fieldset
+						.switch
+							span
+								| Neue Nachrichten
+							input#switch2.switch__toggle(type='checkbox')
+							label(for='switch2').right
+					fieldset
+						.switch
+							span
+								| Audio - profil
+							.switch.right
+								input#radio_male.switch__sex(type='radio', name='sex', checked)
+								label.left_label(for='radio_male') Male
+								input#radio_female.switch__sex(type='radio', name='sex')
+								label.right_label(for='radio_female') Female
+					fieldset
 						a(href='#pass-form', rel='modal:open') Passwort ändern
+					fieldset.centered
+						a(href='#').btn.btn_green.btn_medium.btn_third ok
 
 
 	include _footer.jade
