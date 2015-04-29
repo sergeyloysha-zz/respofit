@@ -142,6 +142,97 @@ input.switch__music + label
 input.switch__music:checked + label:before
     background-color #39aa3d
     
+
+/*
+    Switch Music
+*/
+
+.switch__music
+    position absolute
+    margin-left -9999px
+    visibility hidden
+
+    & + label
+        display block
+        position relative
+        cursor pointer
+        outline none
+        -webkit-user-select none
+        -moz-user-select none
+        -ms-user-select none
+        user-select none
+
+input.switch__music + label
+    width 100px
+    height 55px
+
+    &:before
+    &:after
+        display block
+        position absolute
+        top 0px
+        left 0px
+        bottom 0px
+        content ""
+
+    &:before
+        right 0px
+        background-color #c03600
+        border-radius 70px
+        transition background 0.4s
+
+    &:after
+        width 100px
+        background-color #fff
+        transition opacity 0.4s
+        background url('../images/music.png') center no-repeat
+
+input.switch__music:checked + label:before
+    background-color #39aa3d
+    
+/*
+    Switch sex
+*/
+
+.switch__sex
+    position absolute
+    margin-left -9999px
+    visibility hidden
+
+    & + label
+        display block
+        position relative
+        cursor pointer
+        outline none
+        -webkit-user-select none
+        -moz-user-select none
+        -ms-user-select none
+        user-select none
+
+input.switch__sex + label
+    display inline-block
+    float left
+    width 100px
+    height 50px
+    background #c03600
+    text-align center
+    line-height 50px
+    color #fff
+    font-weight 400
+    transition background .2s
+
+input.switch__sex:checked + label
+    background #39aa3d
+    
+.switch
+    
+    &__sex + label.left_label
+        border-radius 50px 0 0 50px
+        
+    &__sex + label.right_label
+        border-radius 0 50px 50px 0
+
+    
 /*
     Checkbox
 */
@@ -260,3 +351,12 @@ input.checkbox:checked + label:after
 
     input.checkbox:checked + label:after
         background-size 20px 16px 
+        
+    /*
+        Switch sex    
+    */
+        
+    input.switch__sex + label
+        width 70px
+        height 45px
+        line-height 45px

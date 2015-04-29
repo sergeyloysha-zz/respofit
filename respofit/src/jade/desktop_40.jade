@@ -32,20 +32,6 @@ body
 				.grid.grid_border
 					.grid__col.grid__col_two.left
 						fieldset
-							input(placeholder='Registrierungsnummer', type='text')
-							a.field_info.hm(href='#') i
-						fieldset
-							input(placeholder='Muller Schmidt', type='text')
-						fieldset
-							select
-								option Choose your favorite animal
-								option Monkey
-								option Bear
-								option Squirrel
-								option Elephant
-						a(href='#pass-form', rel='modal:open') Passwort ändern
-					.grid__col.grid__col_two.right
-						fieldset
 							.switch
 								span
 									| Begleitende Musik (default)
@@ -57,6 +43,16 @@ body
 									| Neue Nachrichten
 								input#switch2.switch__toggle(type='checkbox')
 								label(for='switch2').right
+						fieldset
+							.switch
+								span
+									| Audio - profil
+								.switch.right
+									input#radio_male.switch__sex(type='radio', name='sex', checked)
+									label.left_label(for='radio_male') Male
+									input#radio_female.switch__sex(type='radio', name='sex')
+									label.right_label(for='radio_female') Female
+						a(href='#pass-form', rel='modal:open') Passwort ändern
 
 
 	include _footer.jade

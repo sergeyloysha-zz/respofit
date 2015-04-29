@@ -56,23 +56,6 @@
         <div class="grid grid_border">
           <div class="grid__col grid__col_two left">
             <fieldset>
-              <input placeholder="Registrierungsnummer" type="text"><a href="#" class="field_info hm">i</a>
-            </fieldset>
-            <fieldset>
-              <input placeholder="Muller Schmidt" type="text">
-            </fieldset>
-            <fieldset>
-              <select>
-                <option>Choose your favorite animal</option>
-                <option>Monkey</option>
-                <option>Bear</option>
-                <option>Squirrel</option>
-                <option>Elephant</option>
-              </select>
-            </fieldset><a href="#pass-form" rel="modal:open">Passwort ändern</a>
-          </div>
-          <div class="grid__col grid__col_two right">
-            <fieldset>
               <div class="switch"><span>Begleitende Musik (default)</span>
                 <input id="switch1" type="checkbox" class="switch__toggle">
                 <label for="switch1" class="right"></label>
@@ -84,6 +67,16 @@
                 <label for="switch2" class="right"></label>
               </div>
             </fieldset>
+            <fieldset>
+              <div class="switch"><span>Audio - profil</span>
+                <div class="switch right">
+                  <input id="radio_male" type="radio" name="sex" checked class="switch__sex">
+                  <label for="radio_male" class="left_label">Male</label>
+                  <input id="radio_female" type="radio" name="sex" class="switch__sex">
+                  <label for="radio_female" class="right_label">Female</label>
+                </div>
+              </div>
+            </fieldset><a href="#pass-form" rel="modal:open">Passwort ändern</a>
           </div>
         </div>
       </div>
