@@ -29,7 +29,14 @@ body
 				.head__col
 					h2.head__title.right Einstellungen
 			.content
-				.grid
+				.grid.grid_border
+					.grid__col.grid__col_two
+						fieldset
+							input(placeholder='Old password', type='password')
+						fieldset
+							input(placeholder='New password', type='password')
+						fieldset
+							input(placeholder='Repeat password', type='password')
 					.grid__col.grid__col_two
 						fieldset
 							.switch
@@ -52,10 +59,8 @@ body
 									label.left_label(for='radio_male') Male
 									input#radio_female.switch__sex(type='radio', name='sex')
 									label.right_label(for='radio_female') Female
-						fieldset
-							a(href='#pass-form', rel='modal:open') Passwort ändern
-						fieldset
-							a(href='#').btn.btn_green.btn_third.btn_200 OK
+				fieldset.centered
+					a(href='#').btn.btn_green.btn_200 OK
 
 
 	include _footer.jade
