@@ -253,26 +253,19 @@ body
             padding 0 0 0 66px
             
 /*
-    V-blocks
+    Workouts
 */
 
-.v-block
+.workouts
     clearfix()
+    margin 0 -30px
+    font-weight 300
     
-    &_grid
-        
-        & .grid
-            border-bottom 1px solid #cfd8df
-            margin 25px 0
-            padding 0 0 25px 0
-            
-        
-        & .grid__col_two:first-child
-            padding 0 50px 0 0
-            
-        & .grid__col_two:last-child
-            padding 0 0 0 50px
-    
+.workout
+    width 50%
+    float left
+    padding 0 30px 30px 30px
+
     &__preview
         display block
         position relative
@@ -282,7 +275,7 @@ body
         border-radius 100%
         box-shadow 0px 0px 0px 4px rgba(152,152,156,.3)
         
-        &:hover .v-block__mask
+        &:hover .workout__mask
             background rgba(0,0,0,0)
         
     &__play
@@ -340,11 +333,11 @@ body
             font-weight 400
             margin 10px 0
             
-.v-block__preview:hover
-    & .v-block__play
+.workout__preview:hover
+    & .workout__play
         opacity 1
         
-    & .v-block__label
+    & .workout__label
         opacity 1
     
 .field_info
@@ -552,16 +545,6 @@ body
         
         & p
             min-height 100px
-            
-.workouts
-    clearfix()
-    margin 0 -30px
-    font-weight 300
-    
-    .workout
-        width 50%
-        float left
-        padding 0 30px 30px 30px
 
 @media (min-height: 1080px)
     .app_link
@@ -583,7 +566,8 @@ body
             &_three:nth-child(3)
                 padding 0 0 0 32px
                 
-    .v-block
+    .workout
+        position relative
         
         &__preview
             width 150px
@@ -591,14 +575,6 @@ body
             
         &__info
             margin-left 180px
-        
-        &_grid
-            
-            & .grid__col_two:first-child
-                padding 0 25px 0 0
-                
-            & .grid__col_two:last-child
-                padding 0 0 0 25px
                 
     .highlights
         display none
@@ -736,30 +712,18 @@ body
                 border-bottom none
                 
     /*
-        V-blocks
+        Workouts
     */
 
-    .v-block
+    .workouts
+        margin 0
         
-        &_grid
-            margin 30px 0
-            
-            & .grid__col_two:first-child
-                padding 0 0 20px 0
-                margin 0 0 20px 0
-                
-            & .grid__col_two:last-child
-                padding 0 0 20px 0
-                margin 0 0 20px 0
-                
-            & .grid__col
-                border-bottom 1px solid #cfd8df
-                
-            & .grid
-                margin 0
-                padding 0
-                border-bottom 0
-        
+    .workout
+        width 100%
+        padding 0 0 15px 0
+        margin 0 0 15px 0
+        border-bottom 1px solid #cfd8df
+    
         &__preview
             width 100px
             height 100px
@@ -791,11 +755,11 @@ body
             & p
                 margin-bottom 10px
                 
-    .v-block__preview:hover
-        & .v-block__play
+    .workout__preview:hover
+        & .workout__play
             opacity 1
             
-        & .v-block__label
+        & .workout__label
             opacity 1
     /*
         Footer
@@ -906,13 +870,3 @@ body
             
             & p
                 min-height 0
-                
-    .workouts
-        margin 0
-        
-        .workout
-            width 100%
-            padding 0 0 15px 0
-            margin 0 0 15px 0
-            border-bottom 1px solid #cfd8df
-            
