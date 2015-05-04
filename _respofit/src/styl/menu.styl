@@ -1,0 +1,121 @@
+/*
+    Menu
+*/
+
+.menu
+    margin 20px auto
+    padding 0 0 20px 0
+    z-index 100
+    list-style none
+    width 100%
+    border-bottom: 1px solid #cfd8df;
+    
+    &_clear
+        border-bottom 0
+        padding 0
+    
+    &__item
+        display block
+        background #95a6b3
+        
+        &:nth-child(2n)
+            background #808f9a
+            
+        &:first-child
+            border-radius 8px 8px 0 0
+            
+        &:last-child
+            border-radius 0 0 8px 8px
+            
+        &_red
+            background #c03600 !important
+        
+            &:hover
+                background #da3d00 !important
+        
+    &__link
+        clearfix()
+        display block
+        padding 25px 30px
+        line-height 50px
+        color #fff
+        text-align left
+        text-decoration none
+        transition color .1s
+        
+        &:hover
+            color #e6e6e6
+    
+    &_link
+        display block
+        padding 20px 0 0 0
+        text-align center
+        
+    &__icon
+        display inline-block
+        float left
+        width 50px
+        height 50px
+        text-align center
+        color #fff
+        background-size 100%
+        background-repeat none
+        margin 0 15px 0 0
+        
+        &_time
+            background-image url('../images/menu_icon_timer.png')
+        &_settings
+            background-image url('../images/menu_icon_settings.png')
+        &_exercises
+            background-image url('../images/menu_icon_exercises.png')
+        &_heart
+            background-image url('../images/menu_icon_heart.png')
+        &_calendar
+            background-image url('../images/menu_icon_calendar.png')
+        &_history
+            background-image url('../images/menu_icon_history.png')
+        &_1
+            background-image url('../images/menu_icon_run.png')
+        &_2
+            background-image url('../images/menu_icon_play.png')
+        &_4
+            background-image url('../images/menu_icon_relax.png')
+        &_3
+            background-image url('../images/menu_icon_think.png')
+            
+@media (max-width: 1280px)
+    
+    .menu
+        width 80%
+    
+            
+@media (max-width: 750px)
+
+    .menu
+        width 100%
+        margin 15px 0
+        padding 0 0 15px 0
+        
+        &_clear
+            padding 0
+        
+        &__item
+            
+            &:first-child
+                border-radius 5px 5px 0 0
+                
+            &:last-child
+                border-radius 0 0 5px 5px
+            
+        &__link
+            padding 10px 15px
+            font-size 15px
+            line-height 45px
+            
+        &_link
+            padding 15px 0 0 0
+            
+        &__icon
+            width 45px
+            height 45px
+            

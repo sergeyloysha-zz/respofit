@@ -1,0 +1,74 @@
+.v
+    margin 0 auto 20px auto
+    max-width: 874px
+
+    background: #fff
+    border-radius 8px
+    padding 10px
+
+    &__preview
+        position relative
+
+        &_image
+            display block
+            width 100%
+            height 100%
+            border-radius 5px
+
+        &_mask
+            top 0
+            left 0
+            position absolute
+            width 100%
+            height 100%
+            background rgba(0,0,0,.6)
+            z-index 100
+            border-radius 5px
+            
+    &__info
+        display flex
+        clearfix()
+        padding 20px
+        
+        &_timer
+            
+            span
+                display block
+                line-height 70px
+                background url('../images/timer.png') 0 center no-repeat
+                padding 0 0 0 50px
+                color #555
+
+        &_music
+            display flex
+            //float right
+                
+            & label
+                margin auto
+            
+        &_controls
+            display flex
+            margin auto
+            
+        &_control
+            display inline-block
+            width 55px
+            height 55px
+            background #000
+            margin auto
+            opacity 1
+            cursor pointer
+            transition opacity .2s
+            
+            &_stop
+                background url('../images/stop.png') center no-repeat
+                
+            &_play
+                margin auto 30px
+                background url('../images/play.png') center no-repeat
+                
+            &_replay
+                background url('../images/replay.png') 5px center no-repeat
+                
+            &:hover
+                opacity .7

@@ -1,0 +1,26 @@
+doctype
+html
+	include _head.jade
+body
+
+	include _header.jade
+
+	.container
+		.container__inner
+			.head
+				.head__col
+					a.head__button-back(href='#') ZURUCK
+						i.head__button-back_arrow
+				.head__col
+					h2.head__title.right Trainingsplan
+			.content.v-block_grid
+				p.centered Fur Welchen Zeitraum sollen die Ubungen in Ihren Kalender ubernommen werden?
+				.grid
+					.grid__col.grid__col_three
+						.btn.btn_green.btn_full Nur heute
+					.grid__col.grid__col_three
+						.btn.btn_green.btn_full Diese Woche
+					.grid__col.grid__col_three
+						.btn.btn_green.btn_full Trainingsplan Komplett
+
+	include _footer.jade

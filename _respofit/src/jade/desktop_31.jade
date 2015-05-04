@@ -1,0 +1,37 @@
+doctype
+html
+head
+	include _head.jade
+body
+
+	include _header.jade
+
+	.container
+		.container__inner
+			.head
+				.head__col
+					a.head__button-back(href='#') ZURUCK
+						i.head__button-back_arrow
+				.head__col
+					h2.head__title.right Meine Ubungen
+			.search.search_break
+				input.search__input(type='text', placeholder='Ubung Suchen')
+			ul.menu
+					li.menu__item
+						a.menu__link(href='#')
+							i.menu__icon.menu__icon_1
+							| Bewegen
+					li.menu__item
+						a.menu__link(href='#')
+							i.menu__icon.menu__icon_2
+							| Entspannen
+					li.menu__item
+						a.menu__link(href='#')
+							i.menu__icon.menu__icon_3
+							| Denken
+					li.menu__item
+						a.menu__link(href='#')
+							i.menu__icon.menu__icon_4
+							| Spielen
+
+	include _footer.jade

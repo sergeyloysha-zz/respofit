@@ -1,0 +1,46 @@
+doctype
+html
+head
+	include _head.jade
+body
+	
+	include _header.jade
+
+	.intro
+		.video
+			.video__mask
+			.video__play
+			img.video__preview(src='images/intro.jpg')
+	.tm
+		.tm__timer
+			span.tm__text.tm__text_timer
+				i.tm__icon.tm__icon_timer
+				| 00:45
+		.tm__music.tm__music_off
+			span.tm__text.tm__text_music
+				i.tm__icon.tm__icon_music
+				| Musik: ein
+	.container
+		.container__inner
+			.head
+				.head__col
+					a.head__button-back(href='#') ZURUCK
+						i.head__button-back_arrow
+				.head__col
+					h2.head__title.right Liegestutzen
+			.content
+				.list
+					.list__circle
+						span Millionen Menschen in Deutschland schwitzen im Fitness-Studio fur den perfekten Korper. Das einzige Problem dabei ist oft die Zeit: Ein effektives Workout dauert gut und gerne eine Stunde - und das ist vielen Frauen und Mannern zu lang. Mit den neuen Hightech-Trainingsgeraten soll man jetzt, laut Hersteller, 30 bis 40 Prozent effektiver trainieren kolaut Hersteller, 30 bis 40 Prozent effektiver trainieren konnen - und das in kurzerer Zeit.
+						.list__circle-circle 1
+					.list__circle
+						span Miha-Zirkel nennt sich das Ganze und die Gerate sollen die Fitnesswelt revolutionieren. FIT FOR FUN TV ist dem neuen Trend nachgegangen - ist ein schnelleres und wirkungsvolleres Workout wirklich moglich?
+						.list__circle-circle 2
+					.list__circle
+						span FIT FOR FUN TV wollte wissen, ob man mit den neuen Trainingsgeraten wirklich effektiver und schneller trainieren kann und hat unter der Anleitung von Trainingswissenschaftlern der Sporthochschule Koln einen Trainingscheck durchgefuhrt.
+						.list__circle-circle 3
+					.list__control 
+						a.btn.btn_large.btn_green(href='#') beenden
+
+
+	include _footer.jade

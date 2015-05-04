@@ -1,0 +1,76 @@
+.header
+    background #264257     
+    
+    &__logo
+        position relative
+        display block
+        float left
+        top 30px
+        background url('../images/logo.png') no-repeat
+        width 193px
+        height 42px
+        
+.header__menu
+    list-style none
+    clearfix()
+    margin 15px 0
+    padding 0
+    
+    &-item
+        position relative
+        float left
+        margin 0 0 0 20px
+
+        span
+            position relative
+            top 10px
+            font-size 18px
+            line-height 25px
+            color #fff
+            font-weight 300
+        
+    &-link
+        display block
+        width 70px
+        height 70px
+        background-repeat no-repeat
+        background-size 100%
+        
+        &_calendar
+            background-image url('../images/header_icon_calendar.png')
+            
+        &_menu
+            background-image url('../images/header_icon_menu.png')
+                
+            &.active
+                background-image url('../images/header_icon_close.png')
+                & + .dropdown
+                    display block
+                    
+        &_logout
+            background-image url('../images/header_icon_logout.png')
+            
+                    
+@media (max-width: 750px)
+
+    .header
+        
+        &__logo
+            width 97px
+            height 21px
+            background-size 97px 21px
+            
+    .header__menu
+        margin 10px 0
+        
+        &-item
+            position static
+            margin 0 0 0 16px
+            
+            & span
+                top 8px
+                line-height 20px
+            
+        &-link
+            width 60px
+            height 60px

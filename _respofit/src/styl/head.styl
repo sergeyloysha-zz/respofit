@@ -1,0 +1,96 @@
+.head
+    clearfix()
+    margin 20px 0
+    padding 0 0 20px 0
+    border-bottom 1px solid #cfd8df
+    
+    &__col
+        display block
+        float left
+        width 50%
+        height 55px
+        
+    &__button-back
+        position relative
+        display inline-block
+        background #5783a4
+        color #fff
+        text-transform uppercase
+        text-decoration none
+        border-radius 3px
+        height 55px
+        line-height 55px
+        padding 0 20px 0 5px
+        margin-left 22px
+        
+        &:hover
+            color #fff
+        
+        &_arrow
+            display block
+            position absolute
+            top 0
+            left -22px
+            width 24px
+            height 55px
+            background url('../images/back.png') left center no-repeat
+        
+            
+    &__search
+        display block
+        margin 0 auto
+        width 24px
+        height 55px
+        background url('../images/search.png') center no-repeat
+        
+    &__search-input
+        display block
+        position relative
+        width 80%
+        top 7px
+        background #fff
+        margin 0 auto
+        padding 11px 20px 11px 55px
+        border 0
+        border-radius 50px
+        background-image url('../images/search_small.png')
+        background-position 20px center
+        background-repeat no-repeat
+        line-height 18px
+        
+        &:focus
+            box-shadow(0 0 0 2px #95a6b3)
+            
+    &__title
+        margin 0
+        line-height 55px
+        font-weight 300
+        
+@media (max-width: 750px)
+
+    .head
+        margin 15px 0
+        padding 0 0 15px 0
+        
+        &__col
+            height 35px
+            
+        &__button-back
+            font-size 12px
+            height 35px
+            line-height 35px
+            padding 0 10px 0 3px
+            margin-left 15px
+            
+            &_arrow
+                display block
+                position absolute
+                top 0
+                left -15px
+                width 19px
+                height 35px
+                background-size 19px 35px
+                
+        &__title
+            margin 0
+            line-height 35px
