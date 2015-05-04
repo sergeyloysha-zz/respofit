@@ -3,7 +3,12 @@ html
 	include _head.jade
 body
 
-	include _header.jade
+	.header
+		.header__inner
+			a.header__logo(href='#')
+			ul.header__menu.right
+				li.header__menu-item
+					a.header__menu-link.header__menu-link_logout(href='#')
 	
 	.container
 		.container__inner
@@ -16,22 +21,28 @@ body
 			.content
 				.messages
 					.message
-						p Millionen Menschen in Deutschland schwitzen im Fitness-Studio fur den perfekten Koper. Das einzige Problem dabei ist oft die Zeit:
-						a.btn.btn_rounded.btn_green(href='#') Mehr details
+						.message__image
+							img(src='//place-hold.it/200x200')
+						.message__info
+							p Millionen Menschen in Deutschland schwitzen im Fitness-Studio fur den perfekten Koper. Das einzige Problem dabei ist oft die Zeit:
+							a.btn.btn_rounded.btn_green(href='#') Mehr details
 					.message
-						p Millionen Menschen in Deutschland schwitzen im Fitness-Studio fur den perfekten Koper. Das einzige Problem dabei ist oft die Zeit:
-						a.btn.btn_rounded.btn_green(href='#') Mehr details
+						.message__image
+							img(src='//place-hold.it/200x200')
+						.message__info
+							p Millionen Menschen in Deutschland schwitzen im Fitness-Studio fur den perfekten Koper. Das einzige Problem dabei ist oft die Zeit:
+							a.btn.btn_rounded.btn_green(href='#') Mehr details
 					.message
-						p Millionen Menschen in Deutschland schwitzen im Fitness-Studio fur den perfekten Koper. Das einzige Problem dabei ist oft die Zeit:
-						a.btn.btn_rounded.btn_green(href='#') Mehr details
+						.message__image
+							img(src='//place-hold.it/200x200')
+						.message__info 
+							p Millionen Menschen in Deutschland schwitzen im Fitness-Studio fur den perfekten Koper. Das einzige Problem dabei ist oft die Zeit:
+							a.btn.btn_rounded.btn_green(href='#') Mehr details
 					.message
-						p Millionen Menschen in Deutschland schwitzen im Fitness-Studio fur den perfekten Koper. Das einzige Problem dabei ist oft die Zeit:
-						a.btn.btn_rounded.btn_green(href='#') Mehr details
-					.message
-						p Millionen Menschen in Deutschland schwitzen im Fitness-Studio fur den perfekten Koper. Das einzige Problem dabei ist oft die Zeit:
-						a.btn.btn_rounded.btn_green(href='#') Mehr details
-					.message
-						p Millionen Menschen in Deutschland schwitzen im Fitness-Studio fur den perfekten Koper. Das einzige Problem dabei ist oft die Zeit:
-						a.btn.btn_rounded.btn_green(href='#') Mehr details
+						.message__image
+							img(src='//place-hold.it/200x200')
+						.message__info
+							p Millionen Menschen in Deutschland schwitzen im Fitness-Studio fur den perfekten Koper. Das einzige Problem dabei ist oft die Zeit:
+							a.btn.btn_rounded.btn_green(href='#') Mehr details
 					
 	include _footer.jade
