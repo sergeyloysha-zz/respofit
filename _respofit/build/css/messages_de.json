@@ -1,0 +1,114 @@
+{
+	"success": true,
+	"data": {
+
+		"login.input.username": "Benutzername",
+		"login.input.password": "Passwort",
+		"login.button.login": "Start",
+		"login.link.registration": "Noch nicht registriert?",
+		"login.text.headline": "Willkomen bei der",
+		"login.checkbox.remember_me": "Eingaben speichern",
+
+		"registration.input.username": "Username",
+		"registration.input.phone": "Kontakt Telefonnumber",
+		"registration.input.email": "Kontakt E-mail",
+		"registration.button.send": "unverbidnliche anfrage senden",
+		"registration.text.request_received": "запрос на регистрацию получен, спасибо",
+		"registration.text.headline": "Willkomen bei der",
+		"registration.text.subheadline": "Bitte schicken Sie eine unverbidnliche Registrierungsanfrage um den Zugriff auf personliche Trainingsplane zu erhalten",
+		"registration.link.login": "Назад на логин",
+
+		"load.text.headline": "Ihre trainingsplane werden aktualisiert, bitte warten Sie...",
+		
+		"menu.plan": "Mein Trainingsplan",
+		"menu.categories": "Übungen",
+		"menu.history": "Training Historie",
+		"menu.extras": "Extras",
+		"menu.settings": "Einstellungen",
+		"menu.export": "Trainingsplan exportieren",
+
+		"messages.title": "Nachrichten",
+		"messages.new": "Nachrichten – Übersicht",
+		"messages.no": "Keine neue Nachrichten",
+		"messages.empty": "Keine neue Nachrichten",
+		"messages.details": "Mehr Details...",
+
+	  	"server.client.invalid_old_password":"Old password is invalid!",
+	  	"server.client.empty_password":"Please enter the new password!",
+	  	"server.client.passwords_same":"The new and old password equal!",
+		"server.client.invalid_password":"The password should have at least one number, one letter and one symbol!",
+		"server.client.password_length":"The password should be 8 symbols length!",
+
+	  	"error.internal_server_error":"Internal Server Error!",
+	  	"server.error.session_expired":"Your session is expired! Please login again!",
+	  	"server.error.unauthorized":"Please login!",
+	  	"error.invalid_user_name_password":"Invalid username or password!",
+		"server.error.history.empty_workout_id":"Please specify workout id",
+		"server.error.history.empty_action":"Please specify user action",
+		"server.error.history.invalid_action":"Action invalid!",
+		"server.error.history.empty_action_date":"Please specify action date",
+		"server.error.history.invalid_workout_id":"Invalid workout id",
+		"server.error.client.plan_not_active":"Training plan is not active",
+
+	  	"category": "Kategorie",
+	  	"category.moving": "Bewegen",
+	  	"category.relaxing": "Entspannen",
+	  	"category.thinking": "Denken",
+	  	"category.game": "Spielen",
+
+	  	"settings.title": "Einstellungen",
+	  	"settings.password.old": "Altes Kennwort",
+	  	"settings.password.new": "Neues Passwort",
+	  	"settings.password.repeat": "Passwort Wiederholen",
+	  	"settings.music": "Begleitende Musik (default)",
+	  	"settings.messages": "Neue Nachrichten",
+	  	"settings.voice": "Audio - Profil",
+	  	"settings.voice.male": "Male",
+	  	"settings.voice.female": "Female",
+	  	"settings.save": "Save",
+	  	"settings.error.password.notmatch": "пароли не совпадают",
+	  	"settings.success": "Настройки успешно сохранены",
+
+	  	"button.back": "Zurück", 
+	  	"button.forward": "Nächste", 
+	  	"button.menu": "Menü",
+	  	"button.logout": "Abmelden",
+
+	  	"unit.seconds": "Sekunden lang",
+	  	"unit.minutes": "Minuten lang",
+	  	"unit.hours": "Stunden lang",
+	  	"unit.exhaustion": "bis zur Erschöpfung",
+
+	  	"workouts.title": "Meine Übungen",
+	  	"workouts.search": "Übung suchen",
+	  	"workout.details": "Details",
+
+		"history.title": "Historie",
+		"history.week.current": "Diese Woche",
+		"history.week": "Woche",
+		"history.text.info": "Sie waren fleibig, weiter so",
+		"history.count": "mal",
+
+		"weekday.monday": "Montag",
+		"weekday.tuesday": "Dienstag",
+		"weekday.wednesday": "Mittwoch",
+		"weekday.thursday": "Donnerstag",
+		"weekday.friday": "Freitag",
+		"weekday.saturday": "Samstag",
+		"weekday.sunday": "Sonntag",
+
+		"workout.play": "Play",
+		"workout.pause": "Pause",
+		"workout.stop": "Stop",
+		"workout.restart": "Restart",
+
+		"export.title": "Trainingsplan",
+		"export.text": "Für welchen Zeitraum sollen die Übungen in Ihren Kalender übernommen werden?",
+		"export.today": "Nur heute",
+		"export.week": "Diese Woche",
+		"export.all": "Trainingsplan Komplett"
+
+	},
+	"status": "200",
+	"error": ""
+}

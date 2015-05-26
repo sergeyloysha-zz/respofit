@@ -1,0 +1,74 @@
+doctype
+html
+head
+	include _head.jade
+body
+
+	include _header.jade
+
+	.intro
+		.color
+			.color__data
+				.color__controls
+					a.color__control.color__control_left(href='#')
+					a.color__control.color__control_right(href='#')
+				.color__info
+					.color__info_date Diese Woche
+					.color__info_text Sie waren fleibig, weiter so
+
+	.container
+		.container__inner
+			.head
+				.head__col
+					a.head__button-back(href='#') ZURUCK
+						i.head__button-back_arrow
+				.head__col
+					h2.head__title.right Historie
+
+			.history
+				.history__item
+					h3.history__item_day Montag
+					.history__item_val
+						span 1mal
+						a(href='#') Legenstutzen
+					.history__item_val
+						span 2mal
+						a(href='#') Morgengymnastik
+					.history__item_val
+						span 4mal
+						a(href='#') Legenstutzen
+				.history__item
+					h3.history__item_day Sunday
+					.history__item_val
+						span 1mal
+						a(href='#') Legenstutzen
+					.history__item_val
+						span 2mal
+						a(href='#') Legenstutzen
+					.history__item_val
+						span 1mal
+						a(href='#') Legenstutzen
+				.history__item
+					h3.history__item_day Wendsday
+					.history__item_val
+						span 1mal
+						a(href='#') Morgengymnastik
+					.history__item_val
+						span 2mal
+						a(href='#') Legenstutzen
+					.history__item_val
+						span 1mal
+						a(href='#') Legenstutzen
+				.history__item
+					h3.history__item_day Saturday
+					.history__item_val
+						span 1mal
+						a(href='#') Legenstutzen
+					.history__item_val
+						span 2mal
+						a(href='#') Legenstutzen
+					.history__item_val
+						span 1mal
+						a(href='#') Morgengymnastik
+
+	include _footer.jade

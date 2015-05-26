@@ -10,19 +10,14 @@ body
 
 	.container
 		.container__inner
-			.v
-				.v__preview
-					img.v__preview_image(src='images/preview.jpg')
-					.v__preview_mask
-				.v__info
-					.v__info_timer
-						span 00:45
-					.v__info_controls
-						.v__info_control.v__info_control_stop
-						.v__info_control.v__info_control_play
-						.v__info_control.v__info_control_replay
-					.v__info_music
-						input#switch.switch__music(type='checkbox')
-						label(for='switch').right
+			.w
+				.w__view
+				.w__info
+					.w__info_timer 05:00
+					.w__info_music Musik: ein
+				.w__controls
+					a.w__control.w__control_stop Stop
+					a.w__control.w__control_stop Play
+					a.w__control.w__control_stop Restart
 
 	include _footer.jade

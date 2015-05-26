@@ -14,6 +14,14 @@ body
 					a.content__logo(href='#')
 					form
 						fieldset
+							.lang
+								.lang__left
+									input#lang__left(type='radio', name='lang', checked)
+									label(for='lang__left') Deutsch
+								.lang__right
+									input#lang__right(type='radio', name='lang')
+									label(for='lang__right') English
+						fieldset
 							input(type='text', placeholder='Benutzername')
 						fieldset
 							input(type='password', placeholder='Passwort')

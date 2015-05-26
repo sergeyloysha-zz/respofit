@@ -219,6 +219,40 @@
 			logout: true
 		}, config || {});
 
+		var _menuItems = [
+			{
+				"name": "menu.plan",
+				"icon": "time",
+				"module": "plan"
+			},
+			{
+				"name": "menu.categories",
+				"icon": "exercises",
+				"module": "categories"
+			},
+			{
+				"name": "menu.history",
+				"icon": "history",
+				"module": "history"
+			},
+			{
+				"name": "menu.extras",
+				"icon": "heart",
+				"module": "home"
+			},
+			{
+				"name": "menu.settings",
+				"icon": "settings",
+				"module": "settings"
+			}
+		];
+
+		var menuItems = [];
+
+		$.each(_menuItems, function(index, menuItem){
+			menuItems.push($.createMenuItem(menuItem));
+		});
+
 		var exp,menu,logout;
 
 		var link_export = (
@@ -269,103 +303,7 @@
 				{
 					tag: 'ul',
 					cls: 'dropdown',
-					items: [
-						{
-							tag: 'li',
-							cls: 'menu__item',
-							items: [
-								{
-									tag: 'a',
-									cls: 'menu__link',
-									text: $.message('menu.item.plan'),
-									items: [
-										{
-											tag: 'i',
-											cls: 'menu__icon menu__icon_time'
-										}
-									],
-									on: {
-										click: function() {
-											$.openModule('plan');
-										}
-									}
-								}
-							]
-						},
-						{
-							tag: 'li',
-							cls: 'menu__item',
-							items: [
-								{
-									tag: 'a',
-									cls: 'menu__link',
-									text: $.message('menu.item.exercises'),
-									items: [
-										{
-											tag: 'i',
-											cls: 'menu__icon menu__icon_exercises'
-										}
-									],
-								}
-							]
-						},
-						{
-							tag: 'li',
-							cls: 'menu__item',
-							items: [
-								{
-									tag: 'a',
-									cls: 'menu__link',
-									text: $.message('menu.item.history'),
-									items: [
-										{
-											tag: 'i',
-											cls: 'menu__icon menu__icon_history'
-										}
-									],
-								}
-							]
-						},
-						{
-							tag: 'li',
-							cls: 'menu__item',
-							items: [
-								{
-									tag: 'a',
-									cls: 'menu__link',
-									text: $.message('menu.item.extras'),
-									items: [
-										{
-											tag: 'i',
-											cls: 'menu__icon menu__icon_heart'
-										}
-									],
-								}
-							]
-						},
-						{
-							tag: 'li',
-							cls: 'menu__item',
-							items: [
-								{
-									tag: 'a',
-									cls: 'menu__link',
-									text: $.message('menu.item.settings'),
-									items: [
-										{
-											tag: 'i',
-											cls: 'menu__icon menu__icon_settings'
-										}
-									],
-									on: {
-										click: function() {
-											$.openModule('settings');
-										}
-									}
-								}
-							]
-						}
-					]
+					items: menuItems
 				}
 			]
 		}
@@ -387,17 +325,17 @@
 		})
 
 		if (config.export) {
-			console.log('added export');
+			console.log('header: added export button');
 			exp = link_export;
 		}
 
 		if (config.menu) {
-			console.log('added menu');
+			console.log('header: added menu button');
 			menu = link_menu;
 		}
 
 		if (config.logout) {
-			console.log('added logout');
+			console.log('header: added logout button');
 			logout = link_logout;
 		}
 
@@ -436,7 +374,8 @@
 	$.head = function(config) {
 		config = $.extend({
 			back: true,
-			title: 'undefined'
+			menu: false,
+			title: ''
 		}, config || {});
 
 		var back_button = {
@@ -445,7 +384,7 @@
 				{
 					tag: 'a',
 					cls: 'head__button-back',
-					html: 'ZURUCK<i class="head__button-back_arrow"></i>',
+					html: $.message('button.back') + '<i class="head__button-back_arrow"></i>',
 					on: {
 						click: function() {
 							$.closeActiveModule()
@@ -455,10 +394,33 @@
 			]
 		}
 
+		var menu_button = {
+			cls: 'head__col',
+			items: [
+				{
+					tag: 'a',
+					cls: 'head__button-back',
+					html: $.message('button.menu') + '<i class="head__button-back_arrow"></i>',
+					on: {
+						click: function() {
+							$.openModule('menu')
+						}
+					}
+				}
+			]
+		}
+
 		if (config.back) {
-			console.log('added back');
+			$.debug('head: added back button');
 			button = back_button;
 		}
+
+		if (config.menu) {
+			$.debug('head: added menu button');
+			button = menu_button;
+		}
+
+		$.debug('head: title - ' + config.title);
 
 		var component = {
 			cls: 'head',
@@ -498,4 +460,207 @@
 
 		return component
 	}
+
+	$.createWorkout = function(w, config) {
+		config = $.extend({
+			time: true,
+			duration: true,
+		}, config || {});
+
+		time = [];
+		duration = {};
+
+		if(config.time) {
+			$.each(w.time.items, function(i,t) {
+				time.push(
+					{
+						tag: 'span',
+						text: t + ', '
+					}
+				);
+			});
+		}
+
+		if(config.duration) {
+			duration = (w.duration.toExhaustion) ? $.message('unit.exhaustion') : w.duration.time + ' ' + $.message(w.duration.unit)
+		}
+
+		var component = {
+			cls: 'workout',
+			items: [
+				{
+					tag: 'a',
+					cls: 'workout__preview',
+					items: [
+						{
+							cls: 'workout__play'
+						},
+						{
+							cls: 'workout__mask'
+						},
+						{
+							tag: 'img',
+							cls: 'workout__image',
+							attr: {
+								src: w.pictureThumb
+							}
+						}
+					],
+					on: {
+						click: function() {
+							$.openModule('workout', {
+								'workout': w
+							})
+						}
+					}
+				},
+				{
+					cls: 'workout__info',
+					items: [
+						{
+							cls: 'workout__time',
+							items: [
+								{
+									tag: 'i',
+									cls: 'workout__time_icon'
+								},
+								{
+									tag: 'span',
+									items: [
+										{
+											tag: 'span',
+											items: $.message(time)
+										},
+										{
+											tag: 'span',
+											text: duration
+										}
+									]
+								}
+							]
+						},
+						{
+							tag: 'h3',
+							text: w.name
+						},
+						{
+							tag: 'p',
+							text: w.shortDesc
+						},
+						{
+							tag: 'a',
+							cls: 'btn btn_rounded btn_green',
+							text: $.message('workout.details'),
+							on: {
+								click: function() {
+									$.openModule('workout_details', {
+										'workout': w
+									})
+								}
+							}
+						}
+					]
+				}
+			]
+		};
+
+		return component
+	}
+
+	$.createCategory = function(c) {
+
+		var component = {
+			tag: 'li',
+			cls: 'menu__item',
+			items: [
+				{
+					tag: 'a',
+					cls: 'menu__link',
+					text: $.message(c.categoryName),
+					items: [
+						{
+							tag: 'i',
+							cls: 'menu__icon menu__icon_' + c.categoryId
+						}
+					],
+					on: {
+						click: function() {
+							$.openModule('category', {'category': c});
+						}
+					}
+				}
+			]
+		}
+
+		return component
+	}
+
+	$.createMenuItem = function(m) {
+
+		var component = {
+			tag: 'li',
+			cls: 'menu__item',
+			items: [
+				{
+					tag: 'a',
+					cls: 'menu__link',
+					text: $.message(m.name),
+					items: [
+						{
+							tag: 'i',
+							cls: 'menu__icon menu__icon_' + m.icon
+						}
+					],
+					on: {
+						click: function() {
+							$.openModule(m.module);
+						}
+					}
+				}
+			]
+		}
+
+		return component
+	}
+
+	$.createMessage = function(m) {
+
+		var component = {
+			cls: 'message',
+			items: [
+				{
+					cls: 'message__image',
+					items: [
+						{
+							tag: 'img',
+							attr: {
+								src: 'http://place-hold.it/150x150'
+							}
+						}
+					]
+				},
+				{
+					cls: 'message__info',
+					items: [
+						{
+							html: m.text
+						},
+						{
+							tag: 'a',
+							cls: 'btn btn_rounded btn_green',
+							text: $.message("messages.details"),
+							on: {
+								click: function() {
+									$.openModule('message', {'message': m})
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+
+		return component
+	}
+
 })(jQuery);
