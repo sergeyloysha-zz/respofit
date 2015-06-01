@@ -28,6 +28,13 @@ clearfix()
     &:after
         clear both
         
+box()
+    display -webkit-box
+    display -moz-box
+    display -o-box
+    display -ms-box
+    display box
+        
 .right
     text-align right
     float right
@@ -606,6 +613,15 @@ body
     &__info
         margin-left 180px
         
+        p
+            box()
+            -webkit-line-clamp: 3
+            -webkit-box-orient: vertical
+            box-orient vertical
+            overflow hidden
+            text-overflow ellipsis
+            
+        
 .history
     position relative
     clearfix()
@@ -775,6 +791,9 @@ body
             width 100%
             height auto
             border-radius 5px
+    
+    &_description
+        margin-bottom 30px
             
 .lang
     clearfix()
@@ -789,7 +808,7 @@ body
         label
             display block
             line-height 24px
-            padding 23px 20px
+            padding 15px 20px
             background #fff
             transition background 0.2s
             transition color 0.2s
@@ -812,6 +831,10 @@ body
     &__right
         label
             border-radius 0 5px 5px 0
+            
+.unclick
+    pointer-events: none;
+    cursor: default;
         
 
 @media (min-height: 1080px)
@@ -880,6 +903,9 @@ body
         width 100%
         
     .w__details_media
+        margin-bottom 10px
+        
+    .w__details_description
         margin-bottom 10px
         
     .w__view
